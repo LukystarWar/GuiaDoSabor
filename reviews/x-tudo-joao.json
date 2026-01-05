@@ -1,0 +1,68 @@
+{
+  "placeId": "3",
+  "slug": "x-tudo-joao",
+  "visitDate": "2026-01-02",
+  "publishDate": "2026-01-05",
+
+  "review": {
+    "summary": "O melhor X-Tudo da cidade. Ingredientes generosos, sabor autêntico e um atendimento que faz toda diferença.",
+
+    "fullText": "O X-Tudo do João é uma instituição em Sena Madureira. Com mais de 15 anos de tradição, o lugar mantém a qualidade e o carinho no preparo que conquistou gerações de clientes.\n\nO destaque é, sem dúvida, o X-Tudo tradicional: recheado até não poder mais, com todos os ingredientes frescos e bem distribuídos. A maionese caseira é um diferencial que poucos têm. O João e sua equipe tratam cada cliente como se fosse da família.\n\nO ambiente é despretensioso, mas isso faz parte do charme. É o tipo de lugar que você volta não só pela comida, mas pela experiência completa. Imperdível para quem visita a cidade.",
+
+    "ratings": {
+      "food": 5.0,
+      "service": 5.0,
+      "ambiance": 3.0,
+      "value": 4.0
+    },
+
+    "highlights": [
+      "X-Tudo generoso e autêntico",
+      "Maionese caseira excepcional",
+      "Atendimento familiar e acolhedor",
+      "Tradição de 15+ anos",
+      "Ingredientes sempre frescos"
+    ],
+
+    "dishRecommendations": [
+      {
+        "name": "X-Tudo Tradicional",
+        "price": "R$ 24,00",
+        "note": "O carro-chefe da casa, recheado e delicioso"
+      },
+      {
+        "name": "X-Frango Especial",
+        "price": "R$ 20,00",
+        "note": "Opção mais leve mas igualmente saborosa"
+      }
+    ],
+
+    "priceRange": "$$",
+    "bestFor": ["Tradição local", "Família", "Experiência autêntica"]
+  },
+
+  "curatorNote": "Esta foi minha terceira visita ao longo dos anos. A consistência é impressionante - o sabor continua o mesmo de sempre, e isso é um mérito enorme.",
+
+  "awards": [
+    {
+      "id": "imperdivel",
+      "name": "Imperdível",
+      "emoji": "🌟",
+      "reason": "Melhor lanche da cidade, experiência completa"
+    },
+    {
+      "id": "tradicao",
+      "name": "Tradição Local",
+      "emoji": "🎖️",
+      "reason": "Mais de 15 anos servindo a cidade com qualidade"
+    }
+  ],
+
+  "rankings": [
+    {
+      "listId": "top-10-lanches-2026",
+      "position": 1,
+      "year": 2026
+    }
+  ]
+}

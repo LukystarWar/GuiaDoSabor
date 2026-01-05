@@ -1,163 +1,238 @@
-You are a senior frontend engineer + UI designer. Build a mobile-first static web MVP for a hyperlocal food guide catalog named:
+# Guia da Mesa - Documentação Técnica
 
-PROJECT_NAME: "Guia da Mesa"
-CITY_LABEL: "Sena Madureira – AC"
+**Guia editorial de restaurantes para Sena Madureira - AC**
 
-Product concept:
-- A curated local directory of places to eat (snack bars, cafés, restaurants).
-- MVP is NOT a ranking, NOT delivery, NOT a social network.
-- MVP is a fast, scannable catalog with category browsing and quick contact (WhatsApp + optional Instagram).
-- Phase 2 (NOT in this MVP): place detail page with editorial review/critique and recommendations.
+> 📋 **Roadmap completo:** Veja [ROADMAP.md](ROADMAP.md) para visão das 3 fases do projeto
 
-IMPORTANT CONSTRAINTS
-- Mobile-first UX (most users on mobile).
-- Static hosting on Netlify.
-- No backend, no auth, no external API.
-- Data stored locally as JSON; curator can add/edit places easily.
-- “AI friendly” codebase: minimal indirection, no deep layers, no over-engineering.
-- Feature-based folder structure (each feature self-contained: components, styles, data).
-- Plain CSS (no Tailwind). Use CSS variables + small utility classes.
-- Accessibility: semantic HTML, keyboard-friendly, good contrast.
-- Performance: minimal JS, lazy loading images.
+---
 
-TECH STACK
-Use Astro + TypeScript for static generation and SEO. Avoid React. Use minimal client-side JS only for search/filter interactions.
+## Conceito (FASE 1 - MVP)
 
-MVP PAGES / ROUTES
-1) Home (/)
-   - Top header with PROJECT_NAME and CITY_LABEL.
-   - Search input (search by place name).
-   - Filter chips row (horizontal scroll):
-     - Category chips (Lanches, Pizza, Açaí, Almoço, Cafés, etc.)
-     - Optional tag chips (e.g., "Bom e barato", "Família", "Rápido", "À noite") — keep it simple.
-   - Primary browsing mode: categories as sections:
-     - Each category section shows a small header with category name and count.
-     - Under each category, show a list of cards (mobile: 1 column; larger screens: 2–4 columns).
-   - Each card includes:
-     - Square logo image (like iFood), consistent size (e.g., 72–88px square).
-     - Place name
-     - Category label
-     - Optional tag badges (max 2)
-     - Action buttons:
-       - WhatsApp (primary)
-       - Instagram (secondary, only if present)
-   - Provide an empty state when search/filter returns no results.
-   - Provide a small footer note: "Catálogo curado — informações podem mudar."
+Catálogo simples e rápido de lugares para comer na cidade:
+- Lista de restaurantes, lanchonetes, cafés e pizzarias
+- Contato direto via WhatsApp e Instagram
+- Busca por nome e filtro por categoria
+- **Foco:** mobile-first, simples, rápido
 
-NO Place Detail Page in MVP
-- Do NOT create /lugares/{slug}/ page in this version.
-- Clicking a card should NOT navigate to detail; it can either do nothing or open a small lightweight modal with only contact info (optional). Keep it simple: prefer no modal.
-- The only interactions needed are search/filter and external contact links.
+**Evolução futura:**
+- **Fase 2:** Reviews editoriais curadas (1 crítico/curador)
+- **Fase 3:** Rankings, selos e indicações (tipo Michelin Guide)
 
-DATA MODEL (local JSON)
-Create: src/features/places/data/places.json
-Fields per place:
-- id: string (short unique)
-- name: string
-- categoryId: string
-- tags?: string[] (tag slugs)
-- logo: { src: string, alt: string }
-- contact: { whatsapp: string, instagram?: string }
-- updatedAt: "YYYY-MM-DD"
+---
 
-Create: src/features/taxonomy/data/categories.json
-Example category fields:
-- id: string
-- name: string
-- slug: string
-- order: number
+## Stack Técnica (SIMPLES)
 
-Create: src/features/taxonomy/data/tags.json (optional, but recommended for consistency)
-- id: string (slug)
-- name: string
+- **HTML puro** - uma página única
+- **CSS vanilla** - variáveis CSS, mobile-first
+- **JavaScript mínimo** - só busca e filtros
+- **JSON** - um arquivo com todos os dados
+- **Deploy:** Netlify (sem build, deploy direto)
 
-IMAGE HANDLING
-- Store logos in /public/images/logos/
-- Use square assets; show them inside a rounded square container.
-- Use lazy loading.
-- Provide README instructions for adding and optimizing logos (recommend WebP if possible).
+**Sem frameworks. Sem TypeScript. Sem complicação.**
 
-DESIGN DIRECTION (iFood-like structure, Michelin-like cleanliness)
-- Layout: clean, lots of whitespace, calm borders, subtle shadows.
-- Use chips for categories/tags (scrollable row).
-- Use cards with consistent alignment, clear scanning.
-- No pricing, no distance, no delivery time, no maps.
-- Color palette: neutral base + one accent color (choose a tasteful accent). Use CSS variables.
+---
 
-FEATURE-BASED STRUCTURE (no layered architecture)
-src/
-  features/
-    places/
-      components/
-        PlaceCard.astro
-        PlaceList.astro
-        CategorySection.astro
-      data/
-        places.json
-      lib/
-        groupByCategory.ts
-        filterPlaces.ts
-      styles/
-        places.css
-    taxonomy/
-      data/
-        categories.json
-        tags.json
-      lib/
-        taxonomy.ts
-      styles/
-        taxonomy.css
-    search/
-      components/
-        SearchBar.astro
-        FilterChips.astro
-      lib/
-        queryState.ts (sync filters/search with URL query params)
-      styles/
-        search.css
-  shared/
-    styles/
-      tokens.css
-      base.css
-    lib/
-      strings.ts
-public/
-  images/
-    logos/
-netlify.toml
-README.md
+## Estrutura de Arquivos
 
-FUNCTIONAL REQUIREMENTS
-- Search by name.
-- Filter by:
-  - selected category (single)
-  - optional tags (multi-select) — if implemented, keep it basic.
-- Sync state with URL query params:
-  - q= (search)
-  - cat= (category slug or id)
-  - tags= (comma-separated slugs)
-- Category sections should respect filtering:
-  - When no category filter: show multiple category sections.
-  - When category filter selected: show only that category section.
-- If search/filter results are empty: show a friendly empty state + "Clear filters" action.
+```
+/
+├── index.html          # Página única
+├── style.css           # Todos os estilos
+├── script.js           # Busca e filtros
+├── data.json           # Dados dos lugares
+├── images/
+│   └── logos/          # Logos dos lugares (72x72px)
+└── README.md           # Como adicionar lugares
+```
 
-NETLIFY REQUIREMENTS
-- Provide netlify.toml with correct build command and publish directory for Astro.
-- Provide README: local dev, build, deploy.
+---
 
-CURATOR WORKFLOW (must be extremely easy)
-- README: “How to add a new place”:
-  1) Add logo file into /public/images/logos/
-  2) Add entry into places.json (copy-paste template)
-  3) Commit → Netlify auto-deploy
-- Include seed data with at least 12 sample places (fake data ok).
+## Data Model (data.json)
 
-SEO (basic but correct)
-- Proper title and meta description for Home.
-- Open Graph default image (generic), and social meta tags.
+```json
+{
+  "categories": [
+    { "id": "lanches", "name": "Lanches", "emoji": "🍔" },
+    { "id": "pizza", "name": "Pizza", "emoji": "🍕" },
+    { "id": "acai", "name": "Açaí", "emoji": "🍨" },
+    { "id": "almoco", "name": "Almoço", "emoji": "🍽️" },
+    { "id": "cafes", "name": "Cafés", "emoji": "☕" }
+  ],
+  "places": [
+    {
+      "id": "1",
+      "name": "Burger Point",
+      "category": "lanches",
+      "logo": "images/logos/burger-point.jpg",
+      "whatsapp": "5568999999999",
+      "instagram": "burgerpoint"
+    }
+  ]
+}
+```
 
-DELIVERABLE
-Implement the complete working codebase.
+**Campos obrigatórios:**
+- `id`, `name`, `category`, `logo`, `whatsapp`
 
-Do not use Michelin brand assets or name. Only “Guia da Mesa”.
-Keep the code concise, readable, and maintainable. Prioritize mobile experience.
+**Campo opcional:**
+- `instagram`
+
+---
+
+## Layout da Página
+
+### Header
+- Nome do projeto: **"Guia da Mesa"**
+- Subtítulo: **"Sena Madureira - AC"**
+
+### Busca
+- Input simples: "Buscar lugar..."
+- Busca em tempo real pelo nome
+
+### Filtros (Chips)
+- Botões de categoria: `Todos | Lanches | Pizza | Açaí | Almoço | Cafés`
+- Scroll horizontal no mobile
+- Um selecionado por vez
+
+### Grid de Cards
+- **Mobile:** 1 coluna
+- **Desktop:** 3-4 colunas
+- Cada card:
+  - Logo quadrado (72x72px, bordas arredondadas)
+  - Nome do lugar
+  - Etiqueta da categoria
+  - Botão WhatsApp (verde, destacado)
+  - Botão Instagram (opcional, cinza)
+
+### Footer
+- "Catálogo curado — informações podem mudar"
+
+---
+
+## Funcionalidades
+
+### 1. Busca
+- Digita no input → filtra por nome em tempo real
+- Case insensitive
+
+### 2. Filtro por Categoria
+- Clica em chip → mostra só aquela categoria
+- Clica em "Todos" → mostra tudo
+- Filtro + busca funcionam juntos
+
+### 3. Contatos
+- Botão WhatsApp → abre `https://wa.me/5568999999999`
+- Botão Instagram → abre `https://instagram.com/username`
+
+### 4. Empty State
+- Se busca/filtro não retornar nada:
+  - "Nenhum lugar encontrado"
+  - Botão "Limpar filtros"
+
+---
+
+## Design
+
+### Cores (CSS Variables)
+```css
+--color-primary: #2E7D32;      /* verde para WhatsApp */
+--color-secondary: #E1306C;    /* rosa para Instagram */
+--color-background: #F8F9FA;
+--color-card: #FFFFFF;
+--color-text: #212529;
+--color-text-light: #6C757D;
+--color-border: #DEE2E6;
+```
+
+### Estilo
+- Limpo, com bastante espaço em branco
+- Cards com sombra suave
+- Bordas arredondadas (8px)
+- Fonte: system fonts (sans-serif)
+
+---
+
+## Como Adicionar um Lugar (Workflow do Curador)
+
+1. Adicionar logo em `images/logos/nome-do-lugar.jpg` (72x72px)
+2. Editar `data.json` e adicionar novo objeto em `places`:
+   ```json
+   {
+     "id": "2",
+     "name": "Nome do Lugar",
+     "category": "lanches",
+     "logo": "images/logos/nome-do-lugar.jpg",
+     "whatsapp": "5568999999999",
+     "instagram": "username"
+   }
+   ```
+3. Commit e push → Netlify faz deploy automático
+
+---
+
+## Deploy no Netlify
+
+1. Conectar repositório GitHub
+2. Configurações de build:
+   - **Build command:** (deixar vazio)
+   - **Publish directory:** `/` (raiz)
+3. Deploy automático a cada push na `main`
+
+---
+
+## Seed Data
+
+Incluir 12-15 lugares fictícios de exemplo:
+- 3 Lanchonetes
+- 2 Pizzarias
+- 2 Açaí/Sorvetes
+- 3 Restaurantes (almoço)
+- 2 Cafés
+
+Com logos placeholder (pode usar https://placehold.co/72x72 ou criar simples)
+
+---
+
+## SEO Básico
+
+No `<head>` do `index.html`:
+```html
+<title>Guia da Mesa - Sena Madureira, AC</title>
+<meta name="description" content="Encontre os melhores lugares para comer em Sena Madureira - AC. Lanchonetes, restaurantes, pizzarias e muito mais.">
+<meta property="og:title" content="Guia da Mesa - Sena Madureira">
+<meta property="og:description" content="Guia de restaurantes e lugares para comer em Sena Madureira - AC">
+<meta property="og:type" content="website">
+```
+
+---
+
+## Checklist de Implementação
+
+- [ ] Criar `index.html` com estrutura semântica
+- [ ] Criar `style.css` com layout mobile-first
+- [ ] Criar `script.js` com busca e filtros
+- [ ] Criar `data.json` com seed data (12+ lugares)
+- [ ] Adicionar logos placeholder em `images/logos/`
+- [ ] Criar `README.md` com instruções
+- [ ] Testar no mobile
+- [ ] Deploy no Netlify
+
+---
+
+## Prioridades
+
+✅ **Essencial:**
+- Cards de lugares funcionando
+- Busca funcionando
+- Filtro por categoria funcionando
+- Botões de contato (WhatsApp/Instagram) funcionando
+- Responsivo (mobile + desktop)
+
+❌ **NÃO fazer no MVP:**
+- Páginas de detalhe
+- Sistema de tags adicional
+- Favoritos
+- Compartilhamento
+- Múltiplos idiomas
+- Animações elaboradas
+- URL parameters

@@ -1,0 +1,34 @@
+{
+  "rankings": [
+    {
+      "id": "top-10-lanches-2026",
+      "title": "Top 10 Lanches 2026",
+      "description": "Os melhores lanches de Sena Madureira",
+      "category": "lanches",
+      "year": 2026,
+      "publishDate": "2026-01-05",
+      "totalPlaces": 3,
+      "coverEmoji": "🍔"
+    },
+    {
+      "id": "melhores-pizza-2026",
+      "title": "Melhores Pizzas 2026",
+      "description": "As pizzarias que se destacaram este ano",
+      "category": "pizza",
+      "year": 2026,
+      "publishDate": "2026-01-05",
+      "totalPlaces": 1,
+      "coverEmoji": "🍕"
+    },
+    {
+      "id": "custo-beneficio-2026",
+      "title": "Melhores Custo-Benefício 2026",
+      "description": "Onde comer bem gastando pouco",
+      "category": "all",
+      "year": 2026,
+      "publishDate": "2026-01-05",
+      "totalPlaces": 2,
+      "coverEmoji": "💰"
+    }
+  ]
+}

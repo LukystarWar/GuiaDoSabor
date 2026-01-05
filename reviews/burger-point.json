@@ -1,0 +1,61 @@
+{
+  "placeId": "1",
+  "slug": "burger-point",
+  "visitDate": "2026-01-03",
+  "publishDate": "2026-01-05",
+
+  "review": {
+    "summary": "Um dos melhores hambúrgueres da cidade, com destaque para a carne bem temperada e o excelente custo-benefício.",
+
+    "fullText": "O Burger Point se destaca como uma das melhores opções de lanche em Sena Madureira. A carne é preparada na hora, bem temperada e suculenta, algo raro de encontrar na região. O pão é fresco e macio, e os ingredientes são de qualidade.\n\nO atendimento é cordial e o tempo de espera é razoável, mesmo em horários de pico. O ambiente é simples mas limpo, ideal para lanches rápidos ou para levar.\n\nO destaque fica para o X-Bacon Especial: generoso, saboroso e com um preço que não pesa no bolso. Para quem busca um lanche honesto e bem feito, é parada obrigatória.",
+
+    "ratings": {
+      "food": 4.5,
+      "service": 4.0,
+      "ambiance": 3.5,
+      "value": 4.5
+    },
+
+    "highlights": [
+      "Carne preparada na hora e bem temperada",
+      "Excelente custo-benefício",
+      "Atendimento cordial",
+      "Ingredientes frescos"
+    ],
+
+    "dishRecommendations": [
+      {
+        "name": "X-Bacon Especial",
+        "price": "R$ 18,00",
+        "note": "Generoso e saboroso, a pedida obrigatória da casa"
+      },
+      {
+        "name": "X-Tudo",
+        "price": "R$ 22,00",
+        "note": "Para quem está com fome, vem completo"
+      }
+    ],
+
+    "priceRange": "$$",
+    "bestFor": ["Lanche noturno", "Custo-benefício", "Para levar"]
+  },
+
+  "curatorNote": "Visitei em uma sexta-feira à noite. O movimento era intenso mas a qualidade se manteve. Provei o X-Bacon Especial e o X-Tudo, ambos muito bem preparados.",
+
+  "awards": [
+    {
+      "id": "custo-beneficio",
+      "name": "Melhor Custo-Benefício",
+      "emoji": "💰",
+      "reason": "Qualidade excepcional por um preço justo"
+    }
+  ],
+
+  "rankings": [
+    {
+      "listId": "top-10-lanches-2026",
+      "position": 2,
+      "year": 2026
+    }
+  ]
+}

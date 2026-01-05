@@ -1,0 +1,67 @@
+{
+  "placeId": "4",
+  "slug": "pizzaria-bella",
+  "visitDate": "2025-12-28",
+  "publishDate": "2026-01-05",
+
+  "review": {
+    "summary": "Pizzas de qualidade com massa fina e crocante. Ambiente agradável e bom para família, embora o preço seja um pouco acima da média.",
+
+    "fullText": "A Pizzaria Bella trouxe um toque mais refinado para a cena gastronômica de Sena Madureira. Com forno a lenha e receitas inspiradas na culinária italiana, o lugar se destaca pela qualidade dos ingredientes e pela atenção aos detalhes.\n\nA massa é o ponto forte: fina, crocante nas bordas e macia no centro. As coberturas são generosas sem exageros, mantendo o equilíbrio perfeito. Experimentei a Margherita e a Calabresa Especial, ambas excelentes.\n\nO ambiente é climatizado e bem decorado, ideal para jantares em família ou com amigos. O atendimento é atencioso e profissional. O único ponto de atenção é o preço, que está acima da média da cidade, mas a qualidade justifica o investimento para ocasiões especiais.",
+
+    "ratings": {
+      "food": 4.5,
+      "service": 4.5,
+      "ambiance": 4.5,
+      "value": 3.5
+    },
+
+    "highlights": [
+      "Massa fina e crocante do jeito certo",
+      "Forno a lenha tradicional",
+      "Ambiente climatizado e bem decorado",
+      "Ingredientes de qualidade",
+      "Atendimento profissional"
+    ],
+
+    "dishRecommendations": [
+      {
+        "name": "Pizza Margherita",
+        "price": "R$ 52,00 (grande)",
+        "note": "Simples, mas perfeita na execução"
+      },
+      {
+        "name": "Calabresa Especial",
+        "price": "R$ 58,00 (grande)",
+        "note": "Calabresa de primeira, cebola caramelizada"
+      },
+      {
+        "name": "Quatro Queijos",
+        "price": "R$ 62,00 (grande)",
+        "note": "Cremosa e equilibrada"
+      }
+    ],
+
+    "priceRange": "$$$",
+    "bestFor": ["Ocasiões especiais", "Família", "Jantar romântico"]
+  },
+
+  "curatorNote": "Visitei em um sábado à noite e o lugar estava cheio, mas o atendimento não perdeu a qualidade. Recomendo reservar mesa aos finais de semana.",
+
+  "awards": [
+    {
+      "id": "melhor-ambiente",
+      "name": "Melhor Ambiente",
+      "emoji": "✨",
+      "reason": "Ambiente mais sofisticado e confortável da categoria"
+    }
+  ],
+
+  "rankings": [
+    {
+      "listId": "melhores-pizza-2026",
+      "position": 1,
+      "year": 2026
+    }
+  ]
+}

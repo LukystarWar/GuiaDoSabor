@@ -1,0 +1,109 @@
+{
+  "categories": [
+    { "id": "todos", "name": "Todos", "emoji": "🍴" },
+    { "id": "lanches", "name": "Lanches", "emoji": "🍔" },
+    { "id": "pizza", "name": "Pizza", "emoji": "🍕" },
+    { "id": "acai", "name": "Açaí", "emoji": "🍨" },
+    { "id": "almoco", "name": "Almoço", "emoji": "🍽️" },
+    { "id": "cafes", "name": "Cafés", "emoji": "☕" }
+  ],
+  "places": [
+    {
+      "id": "1",
+      "name": "Burger Point",
+      "category": "lanches",
+      "logo": "images/logos/burger-point.jpg",
+      "whatsapp": "5568999991234",
+      "instagram": "burgerpoint",
+      "hasReview": true,
+      "reviewSlug": "burger-point"
+    },
+    {
+      "id": "2",
+      "name": "Lanchonete da Praça",
+      "category": "lanches",
+      "logo": "images/logos/lanchonete-praca.jpg",
+      "whatsapp": "5568999992345"
+    },
+    {
+      "id": "3",
+      "name": "X-Tudo do João",
+      "category": "lanches",
+      "logo": "images/logos/x-tudo-joao.jpg",
+      "whatsapp": "5568999993456",
+      "instagram": "xtudodojoao",
+      "hasReview": true,
+      "reviewSlug": "x-tudo-joao"
+    },
+    {
+      "id": "4",
+      "name": "Pizzaria Bella",
+      "category": "pizza",
+      "logo": "images/logos/pizzaria-bella.jpg",
+      "whatsapp": "5568999994567",
+      "instagram": "pizzariabella",
+      "hasReview": true,
+      "reviewSlug": "pizzaria-bella"
+    },
+    {
+      "id": "5",
+      "name": "Pizza Express",
+      "category": "pizza",
+      "logo": "images/logos/pizza-express.jpg",
+      "whatsapp": "5568999995678"
+    },
+    {
+      "id": "6",
+      "name": "Açaí da Hora",
+      "category": "acai",
+      "logo": "images/logos/acai-hora.jpg",
+      "whatsapp": "5568999996789",
+      "instagram": "acaidahora"
+    },
+    {
+      "id": "7",
+      "name": "Sorvetes Tropicais",
+      "category": "acai",
+      "logo": "images/logos/sorvetes-tropicais.jpg",
+      "whatsapp": "5568999997890"
+    },
+    {
+      "id": "8",
+      "name": "Restaurante Sabor Caseiro",
+      "category": "almoco",
+      "logo": "images/logos/sabor-caseiro.jpg",
+      "whatsapp": "5568999998901",
+      "instagram": "saborcaseiro"
+    },
+    {
+      "id": "9",
+      "name": "Comida Boa",
+      "category": "almoco",
+      "logo": "images/logos/comida-boa.jpg",
+      "whatsapp": "5568999999012"
+    },
+    {
+      "id": "10",
+      "name": "Prato Feito da Maria",
+      "category": "almoco",
+      "logo": "images/logos/prato-feito-maria.jpg",
+      "whatsapp": "5568999990123",
+      "instagram": "pratofeitomaria"
+    },
+    {
+      "id": "11",
+      "name": "Café Central",
+      "category": "cafes",
+      "logo": "images/logos/cafe-central.jpg",
+      "whatsapp": "5568999991234",
+      "instagram": "cafecentral"
+    },
+    {
+      "id": "12",
+      "name": "Cafeteria do Parque",
+      "category": "cafes",
+      "logo": "images/logos/cafeteria-parque.jpg",
+      "whatsapp": "5568999992345"
+    }
+  ]
+}

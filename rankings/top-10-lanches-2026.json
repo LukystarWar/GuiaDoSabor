@@ -1,0 +1,30 @@
+{
+  "id": "top-10-lanches-2026",
+  "title": "Top 10 Lanches de Sena Madureira 2026",
+  "description": "Os melhores lanches da cidade, avaliados e ranqueados com base em qualidade, sabor, atendimento e custo-benefício.",
+  "publishDate": "2026-01-05",
+  "year": 2026,
+  "category": "lanches",
+
+  "methodology": "Este ranking foi elaborado após visitas a todos os estabelecimentos entre novembro de 2025 e janeiro de 2026. Os critérios incluem: qualidade dos ingredientes, preparo, sabor, atendimento, ambiente e custo-benefício. Todas as avaliações são independentes e sem patrocínio.",
+
+  "places": [
+    {
+      "position": 1,
+      "placeId": "3",
+      "reason": "Experiência completa: sabor autêntico, atendimento familiar e tradição de 15 anos que se mantém impecável"
+    },
+    {
+      "position": 2,
+      "placeId": "1",
+      "reason": "Melhor custo-benefício da cidade com qualidade consistente e ingredientes frescos"
+    },
+    {
+      "position": 3,
+      "placeId": "2",
+      "reason": "Tradição e sabor caseiro que conquistou gerações de clientes locais"
+    }
+  ],
+
+  "curatorNote": "Este ranking reflete a cena atual de lanches em Sena Madureira. É impressionante ver como a qualidade vem crescendo nos últimos anos, com estabelecimentos investindo em ingredientes melhores e atendimento mais profissional."
+}
