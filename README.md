@@ -19,16 +19,35 @@ Catálogo simples e rápido de lugares para comer na cidade, com contato direto 
 
 ## 📁 Estrutura do Projeto
 
+> 📋 **Organização é um ponto CRÍTICO deste projeto!** Consulte [docs/ORGANIZACAO.md](docs/ORGANIZACAO.md) para detalhes completos.
+
 ```
 /
-├── index.html              # Página principal
-├── style.css               # Estilos
-├── script.js               # Lógica de busca e filtros
-├── data.json               # Dados dos lugares e categorias
-├── images/
-│   └── logos/              # Logos dos lugares (72x72px)
+├── index.html              # Página principal (catálogo)
+├── lugar.html              # Página de review individual
 ├── README.md               # Este arquivo
-└── .gitignore              # Arquivos ignorados pelo Git
+├── .gitignore              # Arquivos ignorados pelo Git
+│
+├── src/                    # Código fonte
+│   ├── styles/             # Arquivos CSS
+│   │   ├── style.css       # Estilos globais
+│   │   └── review.css      # Estilos de review
+│   └── scripts/            # Arquivos JavaScript
+│       ├── script.js       # Lógica da home
+│       └── lugar.js        # Lógica da página de review
+│
+├── data/                   # Dados do aplicativo
+│   ├── data.json           # Dados dos lugares e categorias
+│   ├── reviews/            # Reviews editoriais em JSON
+│   └── rankings/           # Rankings curados
+│
+├── public/                 # Arquivos públicos
+│   └── images/logos/       # Logos dos lugares (72x72px)
+│
+└── docs/                   # Documentação
+    ├── ORGANIZACAO.md      # Guia de organização (LEIA!)
+    ├── ROADMAP.md          # Roadmap das 3 fases
+    └── ideia.md            # Documentação técnica
 ```
 
 ---
@@ -72,11 +91,11 @@ http://localhost/GuiaDoSabor
 ### Passo 1: Adicionar logo
 
 1. Prepare uma imagem quadrada (recomendado: 72x72px ou 144x144px)
-2. Salve em `images/logos/nome-do-lugar.jpg` (ou `.png`)
+2. Salve em `public/images/logos/nome-do-lugar.jpg` (ou `.png`)
 
 ### Passo 2: Adicionar dados
 
-Edite o arquivo `data.json` e adicione um novo objeto no array `places`:
+Edite o arquivo `data/data.json` e adicione um novo objeto no array `places`:
 
 ```json
 {

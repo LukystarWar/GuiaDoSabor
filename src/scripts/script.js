@@ -14,7 +14,7 @@ const clearFiltersBtn = document.getElementById('clearFilters');
 // Carregar dados
 async function loadData() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch('data/data.json');
         const data = await response.json();
         categories = data.categories;
         allPlaces = data.places;
@@ -89,7 +89,7 @@ function renderPlaces() {
                 ${place.hasReview ? '<div class="place-card__badge">⭐ Avaliado</div>' : ''}
                 <div class="place-card__header">
                     <img
-                        src="${place.logo}"
+                        src="public/${place.logo}"
                         alt="${place.name}"
                         class="place-card__logo"
                         onerror="this.src='https://placehold.co/72x72/DEE2E6/6C757D?text=${encodeURIComponent(place.name.substring(0, 2))}')"

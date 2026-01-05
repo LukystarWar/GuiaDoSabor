@@ -16,7 +16,7 @@ async function loadPlaceAndReview() {
 
     try {
         // Carregar dados do lugar
-        const dataResponse = await fetch('data.json');
+        const dataResponse = await fetch('data/data.json');
         const data = await dataResponse.json();
 
         const place = data.places.find(p => p.reviewSlug === slug);
@@ -27,7 +27,7 @@ async function loadPlaceAndReview() {
         }
 
         // Carregar review
-        const reviewResponse = await fetch(`reviews/${slug}.json`);
+        const reviewResponse = await fetch(`data/reviews/${slug}.json`);
         const review = await reviewResponse.json();
 
         // Renderizar
@@ -54,7 +54,7 @@ function renderPlaceHeader(place, categories) {
     placeHeader.innerHTML = `
         <div class="place-header__top">
             <img
-                src="${place.logo}"
+                src="public/${place.logo}"
                 alt="${place.name}"
                 class="place-header__logo"
                 onerror="this.src='https://placehold.co/120x120/DEE2E6/6C757D?text=${encodeURIComponent(place.name.substring(0, 2))}'"
