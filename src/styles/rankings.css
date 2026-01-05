@@ -1,0 +1,326 @@
+/* ========================================
+   Navigation
+   ======================================== */
+.main-nav {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    padding: var(--spacing-md) 0;
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.nav-link {
+    padding: var(--spacing-xs) var(--spacing-md);
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: all 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+    background-color: var(--color-background);
+}
+
+.nav-link--active {
+    color: var(--color-primary);
+    background-color: #E8F5E9;
+}
+
+/* ========================================
+   Rankings Grid (Lista de Rankings)
+   ======================================== */
+.rankings-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+    .rankings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.ranking-card {
+    background-color: var(--color-card);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-text);
+    display: block;
+    border: 2px solid transparent;
+}
+
+.ranking-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    border-color: var(--color-primary);
+}
+
+.ranking-card__emoji {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: var(--spacing-md);
+}
+
+.ranking-card__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+}
+
+.ranking-card__description {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.ranking-card__meta {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+.ranking-card__meta-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ========================================
+   Ranking Header (Página Individual)
+   ======================================== */
+.ranking-header {
+    background: linear-gradient(135deg, #FFF3CD 0%, #FFF8E1 100%);
+    border: 2px solid #FFC107;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.ranking-header__emoji {
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: var(--spacing-md);
+}
+
+.ranking-header__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.ranking-header__description {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.ranking-header__meta {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+@media (max-width: 640px) {
+    .ranking-header__emoji {
+        font-size: 3rem;
+    }
+
+    .ranking-header__title {
+        font-size: 1.5rem;
+    }
+
+    .ranking-header__description {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   Ranking Content (Lista de Lugares)
+   ======================================== */
+.ranking-content {
+    background-color: var(--color-card);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ranking-list {
+    list-style: none;
+}
+
+.ranking-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+    transition: all 0.2s;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.ranking-item:hover {
+    background-color: #E8F5E9;
+    transform: translateX(4px);
+}
+
+.ranking-item__position {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    min-width: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ranking-item__position--top3 {
+    color: #FFD700;
+    text-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
+}
+
+.ranking-item__logo {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    background-color: var(--color-card);
+    flex-shrink: 0;
+}
+
+.ranking-item__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ranking-item__name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.ranking-item__category {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: var(--color-card);
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 12px;
+    margin-bottom: var(--spacing-xs);
+    align-self: flex-start;
+}
+
+.ranking-item__reason {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+.ranking-item__awards {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-xs);
+    flex-wrap: wrap;
+}
+
+.award-badge {
+    font-size: 1.2rem;
+    padding: 4px 8px;
+    background: linear-gradient(135deg, #FFF3CD 0%, #FFF8E1 100%);
+    border-radius: 6px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 640px) {
+    .ranking-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ranking-item__position {
+        font-size: 3rem;
+        min-width: auto;
+    }
+
+    .ranking-item__logo {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .ranking-item__category {
+        align-self: center;
+    }
+
+    .ranking-item__awards {
+        justify-content: center;
+    }
+}
+
+/* ========================================
+   Methodology Section
+   ======================================== */
+.methodology-section {
+    background-color: var(--color-background);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.methodology-section__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+}
+
+.methodology-section__text {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* ========================================
+   Empty State
+   ======================================== */
+.empty-rankings {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--color-text-light);
+}
+
+.empty-rankings__icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.empty-rankings__text {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+}

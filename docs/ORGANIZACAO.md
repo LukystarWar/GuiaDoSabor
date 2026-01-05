@@ -15,7 +15,6 @@ GuiaDoSabor/
 ├── 📄 .gitignore              # Arquivos ignorados pelo Git
 │
 ├── 📂 src/                    # Código fonte
-│   ├── 📂 pages/              # Páginas HTML (backups/originais)
 │   ├── 📂 styles/             # Arquivos CSS
 │   │   ├── style.css          # Estilos globais
 │   │   └── review.css         # Estilos de review

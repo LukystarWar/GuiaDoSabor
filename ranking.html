@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carregando... - Guia da Mesa</title>
-    <meta name="description" content="Review editorial de restaurante em Sena Madureira - AC">
+    <meta name="description" content="Ranking curado de lugares em Sena Madureira - AC">
     <link rel="stylesheet" href="src/styles/style.css">
-    <link rel="stylesheet" href="src/styles/review.css">
     <link rel="stylesheet" href="src/styles/rankings.css">
 </head>
 <body>
@@ -14,34 +13,34 @@
         <!-- Navigation -->
         <nav class="main-nav">
             <a href="index.html" class="nav-link">Catálogo</a>
-            <a href="rankings.html" class="nav-link">Rankings</a>
+            <a href="rankings.html" class="nav-link nav-link--active">Rankings</a>
             <a href="sobre.html" class="nav-link">Sobre</a>
         </nav>
 
         <!-- Back Button -->
-        <a href="index.html" class="back-link">← Voltar para o catálogo</a>
+        <a href="rankings.html" class="back-link">← Voltar para rankings</a>
 
         <!-- Loading State -->
         <div id="loadingState" class="loading-state">
-            <p>Carregando...</p>
+            <p>Carregando ranking...</p>
         </div>
 
-        <!-- Place Header -->
-        <div id="placeHeader" class="place-header" style="display: none;">
+        <!-- Ranking Header -->
+        <div id="rankingHeader" class="ranking-header" style="display: none;">
             <!-- Será preenchido via JS -->
         </div>
 
-        <!-- Review Content -->
-        <div id="reviewContent" class="review-content" style="display: none;">
+        <!-- Ranking Content -->
+        <div id="rankingContent" class="ranking-content" style="display: none;">
             <!-- Será preenchido via JS -->
         </div>
 
         <!-- Footer -->
         <footer class="footer">
-            <p class="footer__text">Catálogo curado — informações podem mudar</p>
+            <p class="footer__text">Rankings baseados em visitas e avaliações independentes</p>
         </footer>
     </div>
 
-    <script src="src/scripts/lugar.js"></script>
+    <script src="src/scripts/ranking.js"></script>
 </body>
 </html>
